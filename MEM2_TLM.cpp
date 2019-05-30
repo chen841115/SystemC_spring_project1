@@ -4,7 +4,7 @@ void Memory2::mem2_do(tlm::tlm_generic_payload& trans, sc_time& delay)
 {
     
     tlm_command     cmd = trans.get_command();
-    uint32_t       tlm_addr = trans.get_address()/4;
+    uint32_t       tlm_addr = trans.get_address();
     unsigned char*  ptr = trans.get_data_ptr();
     unsigned int     len = trans.get_data_length();
     unsigned char*   byt = trans.get_byte_enable_ptr();
